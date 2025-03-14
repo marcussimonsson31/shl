@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: shldb
+    database: shl
+    schema: dbo
+    tables:
+      - name: gamestats_regularseason2425
+      - name: playerstats_playoff2223
+      - name: playerstats_playoff2324
+      - name: playerstats_regularseason2223
+      - name: playerstats_regularseason2324
+      - name: playerstats_regularseason2425
+      - name: teams_2425
+      - name: venues_2425
