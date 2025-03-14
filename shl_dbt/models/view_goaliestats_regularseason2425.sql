@@ -1,4 +1,4 @@
-with cte as(
+;with cte as(
 	select 
 		Player,
 		Team,
@@ -13,23 +13,7 @@ with cte as(
 		SVS,
 		GoalAgainst = CAST(GoalAgainst as int)
 	from [shl].[dbo].[goaliestats_regularseason2425]
-),cte2 as(
-		select 
-		Rank = '',
-		Player,
-		Team,
-		GamesPlayed,
-		GAA,
-		SVProcent,
-		Wins,
-		Losses,
-		Ties,
-		Shootouts,
-		TOI,
-		SVS,
-		GoalAgainst
-	from cte
-),cte3 as(
+),cte2 as (
 	select 
 		Player,
 		Team,
@@ -43,10 +27,11 @@ with cte as(
 		TOI,
 		SVS,
 		GoalAgainst
-	from cte2
+	from cte
 	where len(Player) > 1
 		and len(Team) > 1
 )
 select * 
-from cte3
+from cte2
+
 
