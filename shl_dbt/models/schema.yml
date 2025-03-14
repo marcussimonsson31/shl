@@ -13,3 +13,4 @@ sources:
       - name: playerstats_regularseason2425
       - name: teams_2425
       - name: venues_2425
+      - name: goaliestats_regularseason2425
