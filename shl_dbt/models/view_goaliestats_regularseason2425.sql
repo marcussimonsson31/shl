@@ -1,4 +1,4 @@
-;with cte as(
+with cte as(
 	select 
 		Player,
 		Team,
@@ -12,7 +12,7 @@
 		TOI,
 		SVS,
 		GoalAgainst = CAST(GoalAgainst as int)
-	from [shl].[dbo].[goaliestats_regularseason2425]
+	from {{source ('shldb', 'goaliestats_regularseason2425')}}
 ),cte2 as (
 	select 
 		Player,
